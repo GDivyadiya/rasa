@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        .rw-conversation-container .rw-header{background-color:hsl(250, 69%, 61%);}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: hsl(250, 69%, 61%);}
+        .rw-launcher{background-color: hsl(250, 69%, 61%);}
+        .rw-conversation-container .rw-reply{background-color: hsl(250, 69%, 61%); border: 1px solid hsl(250, 69%, 61%);}
+    </style>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    customData: { language: "en" },
+                    socketUrl: "https://rasaunilearn.herokuapp.com/",
+                 
+                    title: 'Questions? Chat with us!',
+                    subtitle: 'Say hi and Our Aibot guide you!',
+                    profileAvatar: "./svg/bolt.svg",
+                    openLauncherImage: "./svg/bolt-alt.svg",
+                    closeImage: "./svg/bolt-slash.svg",
+                    showFullScreenButton: true,
+                    showMessageDate: true,
+                    
+                    
+                    inputTextFieldHint: "What's in your mind?...",
+                    params: {"storage": "session"},
+                    
+                    customMessageDelay: (message) => {
+                      let delay = message.length * 40;
+                      if (delay > 3 * 1000) delay = 3 * 1000;
+                      if (delay < 800) delay = 800;
+                      return delay;
+                    }
+                  
+                    // add other props here
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+ 
+</body>
+</html>
