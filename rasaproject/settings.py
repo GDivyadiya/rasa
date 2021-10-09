@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'r-xx&*$in0h29&j0pa@#s4_=7u4dkx=9_)38a@xdy^(vv6p5f7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','*','127.0.0.1','https://rasaunilearn.herokuapp.com/','https://rasaproject1204.herokuapp.com/']
 
